@@ -12,8 +12,8 @@ ODM3D is a LiDAR-to-RGB cross-modal knowledge distillation framework. It exploit
 |:----------------------:|:---------------:|:--------------:|:---------------:|:----------------:|:---------------:|:----------------:|
 |     CMKD (ECCV'22)     |      30.20      |     21.50      |      19.40      |        -         |        -        |        -         |
 | Mix-Teaching (CSVT'23) |      29.74      |     22.27      |      19.04      |      37.45       |      28.99      |      25.31       |
-|     LPCG (ECCV'22)     |      31.15      |     23.42      |      20.60      |        -         |        -        |        -         |
-|    ODM3D (WACV'24)     |    **35.09**    |   **23.84**    |    **20.57**    |    **41.24**     |    **30.53**    |    **25.70**     |
+|     LPCG (ECCV'22)     |      31.15      |     23.42      |    **20.60**    |        -         |        -        |        -         |
+|    ODM3D (WACV'24)     |    **35.09**    |   **23.84**    |      20.57      |    **41.24**     |    **30.53**    |    **25.70**     |
 
 ## Checkpoints
 To-do. We will soon provide the pre-trained models for reproducing our experimental results. Please stay tuned.
