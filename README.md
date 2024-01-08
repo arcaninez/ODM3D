@@ -2,8 +2,7 @@
 
 ## Introduction
 This repository contains a PyTorch implementation of [ODM3D](https://arxiv.org/abs/2310.18620) based on the [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) codebase.
-
-
+ODM3D is a LiDAR-to-RGB cross-modal knowledge distillation framework. It exploits unlabelled data and LiDAR point clouds to boost a monocular 3D object detector, leading to new state-of-the-art monocular detection performance on the KITTI dataset.
 ## KITTI Validation Results
 |        Methods         |  3D Car Easy@R40  |  3D Car Mod@R40  |  3D Car Hard@R40  | BEV Car Easy@R40 | BEV Car Mod@R40 | BEV Car Hard@R40 |
 |:----------------------:|:-----------------:|:----------------:|:-----------------:|:----------------:|:---------------:|:----------------:|
@@ -47,7 +46,7 @@ python train_odm3d.py --cfg_file cfgs/kitti_models/ODM3D/odm3d_s2.yaml --pretrai
 ### Evaluation
 * Evaluate a pretrained model with: 
 ```python
-python test_odm3d.py --cfg cfgs/kitti_models/ODM3D/odm3d_s2.yaml --ckpt ${PATH_TO_MODEL}
+python test_odm3d.py --cfg_file cfgs/kitti_models/ODM3D/odm3d_s2.yaml --ckpt ${PATH_TO_MODEL}
 ```
 
 
