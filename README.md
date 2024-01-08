@@ -29,13 +29,31 @@ You may follow the guide provided in [CMKD](https://github.com/Cc-Hy/CMKD/blob/m
 
 ## Getting Started
 
-To-do.
-You may follow the guide provided in [CMKD](https://github.com/Cc-Hy/CMKD/blob/main/docs/GETTING_STARTED.md). Make sure you use [this](https://drive.google.com/file/d/1YxG2Yb1OhlscahsdWrwymY1yFcsOTaqN/view?usp=drive_link) training data file instead of the original one, since the former contains pseudo-labels for unlabelled scenes.
+### Organisation
+You may follow the guide provided in [CMKD](https://github.com/Cc-Hy/CMKD/blob/main/docs/GETTING_STARTED.md). 
+Make sure you use [this](https://drive.google.com/file/d/1YxG2Yb1OhlscahsdWrwymY1yFcsOTaqN/view?usp=drive_link) file as the training data instead of the original one, since the former contains pseudo-labels for unlabelled scenes.
+Image backbone weights (e.g., deeplabv3_resnet50_coco-cd0a2569.pth) shall be automatically downloaded into folder "checkpoints", if not already there, as the training begins.
+
+### Training
+* First conduct stage-1 training with:
+```python
+python train_odm3d.py --cfg_file cfgs/kitti_models/ODM3D/odm3d_s1.yaml --pretrained_lidar_model ../checkpoints/scd-teacher-kitti.pth
+```
+* Then conduct stage-2 training with:
+```python
+python train_odm3d.py --cfg_file cfgs/kitti_models/ODM3D/odm3d_s2.yaml --pretrained_lidar_model ../checkpoints/scd-teacher-kitti.pth --pretrained_img_model ${PATH_TO_STAGE1_MODEL}
+```
+
+### Evaluation
+* Evaluate a pretrained model with: 
+```python
+python test_odm3d.py --cfg cfgs/kitti_models/ODM3D/odm3d_s2.yaml --ckpt ${PATH_TO_MODEL}
+```
+
 
 
 ## Citation
-
-If you find our papers helpful, you may cite it as:
+If you find our paper helpful to your work, you may cite it as:
 ```
 @inproceedings{odm3d,
 author = {Weijia Zhang and Dongnan Liu and Chao Ma and Weidong Cai},
