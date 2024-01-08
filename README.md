@@ -30,7 +30,7 @@ You may follow the guide provided in [CMKD](https://github.com/Cc-Hy/CMKD/blob/m
 ## Getting Started
 
 To-do.
-You may follow the guide provided in [CMKD](https://github.com/Cc-Hy/CMKD/blob/main/docs/GETTING_STARTED.md). Make sure you use [this](https://drive.google.com/file/d/1YxG2Yb1OhlscahsdWrwymY1yFcsOTaqN/view?usp=drive_link) training data file instead of the originally one, since the former contains pseudo-labels for unlabelled scenes.
+You may follow the guide provided in [CMKD](https://github.com/Cc-Hy/CMKD/blob/main/docs/GETTING_STARTED.md). Make sure you use [this](https://drive.google.com/file/d/1YxG2Yb1OhlscahsdWrwymY1yFcsOTaqN/view?usp=drive_link) training data file instead of the original one, since the former contains pseudo-labels for unlabelled scenes.
 
 
 ## Citation
