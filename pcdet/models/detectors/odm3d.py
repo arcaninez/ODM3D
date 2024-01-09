@@ -118,7 +118,7 @@ class ODM3D_MONO(Detector3DTemplate_CMKD):
         if self.training:
             # Occupancy mask
             voxels, voxel_num_points, coords = batch_dict['voxels'], batch_dict['voxel_num_points'], batch_dict['voxel_coords']
-            bev_H, bev_W = 188, 140; batch_size = batch_dict['batch_size'] # modify the usage of 188 & 140
+            bev_H, bev_W = 188, 140; batch_size = batch_dict['batch_size']
             spatial_occupancy_mask = (torch.zeros(batch_size, 1, bev_H, bev_W)).to(voxels.device)
             grid_coords = (coords[:,2:] // 8).long()
             for batch_idx in range(batch_size):
