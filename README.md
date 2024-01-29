@@ -16,12 +16,11 @@ ODM3D is a LiDAR-to-RGB cross-modal knowledge distillation framework. It exploit
 |    ODM3D (WACV'24)     |    **35.09**    |   **23.84**    |      20.57      |    **41.24**     |    **30.53**    |    **25.70**     |
 
 ## Checkpoints
-To-do. We will soon provide the pre-trained models for reproducing our experimental results. Please stay tuned.
+We provide the pre-trained models for reproducing our experimental results. Currently, the provided model has better performance on the Car category and higher training efficiency than the one reported in our paper.
 
-|  Method   | Car Easy@R40 | Car Mod@R40 | Car Hard@R40 |   Student Model    |                                         Teacher Model                                          |
-|:---------:|:------------:|:-----------:|:------------:|:------------------:|:----------------------------------------------------------------------------------------------:|
-| ODM3D-R50 |      -       |      -      |      -       | [model](-) (to-do) | [model](https://drive.google.com/file/d/1NYlaQnS79dAsYSW85JR7NiHu2owc7-rc/view?usp=drive_link) |
-
+|   Method   | 3D Car Easy@R40 | 3D Car Mod@R40 | 3D Car Hard@R40 | BEV Car Easy@R40 | BEV Car Mod@R40 | BEV Car Hard@R40 |    Student     |                                            Teacher                                             |
+|:----------:|:---------------:|:--------------:|:---------------:|:----------------:|:---------------:|:----------------:|:--------------:|:----------------------------------------------------------------------------------------------:|
+| ODM3D-R50  |      34.77      |     24.13      |      20.56      |      43.49       |      30.98      |      27.01       |   [model](https://drive.google.com/file/d/19VK6UwRMj2q9F8lIZ8ay0Jthv-0P5IqP/view?usp=drive_link)    | [model](https://drive.google.com/file/d/1NYlaQnS79dAsYSW85JR7NiHu2owc7-rc/view?usp=drive_link) |
 
 
 ## Installation
@@ -43,6 +42,11 @@ python train_odm3d.py --cfg_file cfgs/kitti_models/ODM3D/odm3d_s1.yaml --pretrai
 * Then conduct stage-2 training with:
 ```python
 python train_odm3d.py --cfg_file cfgs/kitti_models/ODM3D/odm3d_s2.yaml --pretrained_lidar_model ../checkpoints/scd-teacher-kitti.pth --pretrained_img_model ${PATH_TO_STAGE1_MODEL}
+```
+* To resume training from a previously saved checkpoint, do:
+```python
+python train_odm3d.py --cfg_file cfgs/kitti_models/ODM3D/odm3d_s1.yaml --pretrained_lidar_model ../checkpoints/scd-teacher-kitti.pth -ckpt ${PATH_TO_CKPT}
+python train_odm3d.py --cfg_file cfgs/kitti_models/ODM3D/odm3d_s2.yaml --pretrained_lidar_model ../checkpoints/scd-teacher-kitti.pth --ckpt ${PATH_TO_CKPT}
 ```
 
 ### Evaluation
