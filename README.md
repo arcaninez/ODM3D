@@ -1,4 +1,4 @@
-# [WACV'24] ODM3D: Alleviating Foreground Sparsity for Semi-Supervised Monocular 3D Object Detection
+\# [WACV'24] ODM3D: Alleviating Foreground Sparsity for Semi-Supervised Monocular 3D Object Detection
 
 ## Introduction
 This repository contains a PyTorch implementation of [ODM3D](https://arxiv.org/abs/2310.18620) based on the [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) codebase.
@@ -20,11 +20,10 @@ We provide the pre-trained models for reproducing our experimental results. Curr
 
 |   Method   | 3D Car Easy@R40 | 3D Car Mod@R40 | 3D Car Hard@R40 | BEV Car Easy@R40 | BEV Car Mod@R40 | BEV Car Hard@R40 |    Student     |                                            Teacher                                             |
 |:----------:|:---------------:|:--------------:|:---------------:|:----------------:|:---------------:|:----------------:|:--------------:|:----------------------------------------------------------------------------------------------:|
-| ODM3D-R50  |      34.77      |     24.13      |      20.56      |      43.49       |      30.98      |      27.01       |   [model](https://drive.google.com/file/d/19VK6UwRMj2q9F8lIZ8ay0Jthv-0P5IqP/view?usp=drive_link)    | [model](https://drive.google.com/file/d/1NYlaQnS79dAsYSW85JR7NiHu2owc7-rc/view?usp=drive_link) |
+| ODM3D-R50  |      35.32      |     23.96      |      21.16      |      43.37       |      30.82      |      27.07       |   [model](https://drive.google.com/file/d/1KjPb6Q5S5aPuqKy0tfX0DfhJx5AW00_G/view?usp=sharing)    | [model](https://drive.google.com/file/d/1NYlaQnS79dAsYSW85JR7NiHu2owc7-rc/view?usp=drive_link) |
 
 
 ## Installation
-To-do. 
 You may follow the guide provided in [CMKD](https://github.com/Cc-Hy/CMKD/blob/main/docs/INSTALL.md).
 
 ## Getting Started
